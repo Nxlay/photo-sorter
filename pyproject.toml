@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "photo-sorter"
+version = "1.0.0"
+description = "Sort pictures by capture time, rename them, and optionally convert them to JPEG."
+requires-python = ">=3.9"
+dependencies = [
+    "Pillow>=10.0",
+    "pillow-heif>=0.13",
+]
+
+[project.scripts]
+photo-sorter = "photo_sorter.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
